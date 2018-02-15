@@ -16,6 +16,8 @@ class SignInView: UIView {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet var signUpDelegate:SignUpViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -32,5 +34,15 @@ class SignInView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
+    
+    @IBAction func loginClick(_ sender: Any) {
 
+    }
+    
+    @IBAction func registerClick(_ sender: Any) {
+        
+        self.isHidden = true
+        signUpDelegate?.SignUpView()
+    }
+    
 }

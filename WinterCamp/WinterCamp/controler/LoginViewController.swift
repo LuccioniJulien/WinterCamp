@@ -13,24 +13,25 @@ class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegat
     
     @IBOutlet weak var contentSignUp: SignUpView!
     @IBOutlet weak var contentSignIn: SignInView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        contentSignUp.isHidden = true
-        contentSignIn.isHidden = false
+        
     }
 
     func SignInView(){
-        
+        contentSignIn.isHidden = false
     }
     
     func SignUpView(){
-        
+       contentSignUp.isHidden = false
     }
 }
 
