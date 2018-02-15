@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class SignInView: UIView {
 
@@ -37,6 +38,7 @@ class SignInView: UIView {
     
     @IBAction func loginClick(_ sender: Any) {
         if(User.StaticUser?._mail==""){
+            self.contentView.makeToast("Please register first")
             print("Please register first")
             return
         }
@@ -44,9 +46,11 @@ class SignInView: UIView {
         if emailText.text == User.StaticUser?._mail && passwordText.text == User.StaticUser?._password {
             emailText.text = ""
             passwordText.text = ""
+            self.contentView.makeToast("good I.D, welcome \(User.StaticUser!._mail)")
             print("good I.D, welcome \(User.StaticUser!._mail)")
         } else {
-             print("Unable to find a match with this pair of email / password“")
+            self.contentView.makeToast("Unable to find a match with this pair of email / password“")
+            print("Unable to find a match with this pair of email / password")
         }
         
     }

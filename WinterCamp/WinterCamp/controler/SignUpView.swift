@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class SignUpView: UIView {
 
@@ -38,10 +39,12 @@ class SignUpView: UIView {
     
     @IBAction func signUpClick(_ sender: Any) {
         if emailText.text == "" || passwordText.text == "" || passwordConfirmText.text == "" {
+            self.contentView.makeToast("Email or password blank")
             print("Email or password blank")
             return
         }
         if(!isValidEmail(testStr:emailText.text!)){
+            self.contentView.makeToast("Email invalid")
             print("Email invalid")
             return
         }
@@ -56,6 +59,7 @@ class SignUpView: UIView {
             signInDelegate?.SignInView()
         }
         else{
+            self.contentView.makeToast("Password invalid")
             print("Password invalid")
         }
     }
