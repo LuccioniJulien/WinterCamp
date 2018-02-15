@@ -27,7 +27,7 @@ class SignInView: UIView {
     }
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("SignUpView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("SignInView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

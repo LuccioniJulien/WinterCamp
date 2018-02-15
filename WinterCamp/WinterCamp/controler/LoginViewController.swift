@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegate {
 
-    func SignInView(){
-        
-    }
+    
+    @IBOutlet weak var contentSignUp: SignUpView!
+    @IBOutlet weak var contentSignIn: SignInView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,8 +21,16 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        contentSignUp.isHidden = true
+        contentSignIn.isHidden = false
     }
 
-
+    func SignInView(){
+        
+    }
+    
+    func SignUpView(){
+        
+    }
 }
 
