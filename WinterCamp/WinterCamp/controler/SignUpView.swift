@@ -38,17 +38,25 @@ class SignUpView: UIView {
     
     @IBAction func signUpClick(_ sender: Any) {
         if emailText.text == "" || passwordText.text == "" || passwordConfirmText.text == "" {
-            print("nil is bad")
+            print("Email or password blank")
             return
         }
         if(!isValidEmail(testStr:emailText.text!)){
-            print("bad mail")
+            print("Email invalid")
             return
         }
         if (passwordText.text == passwordConfirmText.text){
-        User.StaticUser?.setUser(mail: emailText.text!, password: passwordText.text!)
-        print(User.StaticUser?._mail)
-        print(User.StaticUser?._password)
+            User.StaticUser?.setUser(mail: emailText.text!, password: passwordText.text!)
+            print("User : \(User.StaticUser!._mail)")
+            print("Pass : \(User.StaticUser!._password)")
+            self.isHidden = true
+            passwordText.text=""
+            passwordConfirmText.text=""
+            emailText.text = ""
+            signInDelegate?.SignInView()
+        }
+        else{
+            print("Password invalid")
         }
     }
     @IBAction func goToLoginClick(_ sender: Any) {

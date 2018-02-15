@@ -36,7 +36,19 @@ class SignInView: UIView {
     }
     
     @IBAction func loginClick(_ sender: Any) {
-
+        if(User.StaticUser?._mail==""){
+            print("Please register first")
+            return
+        }
+        
+        if emailText.text == User.StaticUser?._mail && passwordText.text == User.StaticUser?._password {
+            emailText.text = ""
+            passwordText.text = ""
+            print("good I.D, welcome \(User.StaticUser!._mail)")
+        } else {
+             print("Unable to find a match with this pair of email / password“")
+        }
+        
     }
     
     @IBAction func registerClick(_ sender: Any) {
