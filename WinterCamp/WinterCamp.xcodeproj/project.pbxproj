@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161ECAE620362A6900AA4A26 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161ECAE520362A6900AA4A26 /* Function.swift */; };
 		1656076D20358DAF00366E66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656076C20358DAF00366E66 /* User.swift */; };
 		1656077020358F5D00366E66 /* SignInViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656076F20358F5D00366E66 /* SignInViewDelegate.swift */; };
 		1656077220358F8100366E66 /* SignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656077120358F8100366E66 /* SignUpViewDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		06E02C548F059D1851E54C72 /* Pods-WinterCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinterCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WinterCamp/Pods-WinterCamp.debug.xcconfig"; sourceTree = "<group>"; };
 		12D966B8F2C77F4641C8D06A /* Pods-WinterCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinterCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WinterCamp/Pods-WinterCamp.release.xcconfig"; sourceTree = "<group>"; };
+		161ECAE520362A6900AA4A26 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		1656076C20358DAF00366E66 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1656076F20358F5D00366E66 /* SignInViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewDelegate.swift; sourceTree = "<group>"; };
 		1656077120358F8100366E66 /* SignUpViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161ECAE420362A4A00AA4A26 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				161ECAE520362A6900AA4A26 /* Function.swift */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
 		1656076920358C5F00366E66 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		16F653DC2035862D00D1613D /* WinterCamp */ = {
 			isa = PBXGroup;
 			children = (
+				161ECAE420362A4A00AA4A26 /* Function */,
 				1656076E20358F5000366E66 /* delegate */,
 				1656076B20358D0E00366E66 /* view */,
 				1656076A20358D0200366E66 /* controler */,
@@ -279,6 +290,7 @@
 				1656077020358F5D00366E66 /* SignInViewDelegate.swift in Sources */,
 				16F653DE2035862D00D1613D /* AppDelegate.swift in Sources */,
 				1656076D20358DAF00366E66 /* User.swift in Sources */,
+				161ECAE620362A6900AA4A26 /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

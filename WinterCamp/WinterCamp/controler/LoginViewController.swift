@@ -27,11 +27,22 @@ class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegat
     }
 
     func SignInView(){
+        // Permet de faire apparaitre SignInView
+        // contentSignIn.emailText.text = User.StaticUser?._mail
+        // contentSignIn.passwordText.text = User.StaticUser?._password
+        resetSelectedTextField(textfield:contentSignIn.emailText)
+        resetSelectedTextField(textfield:contentSignIn.passwordText)
         contentSignIn.isHidden = false
     }
     
     func SignUpView(){
-       contentSignUp.isHidden = false
+        // Permet de faire apparaitre SignUpView
+        resetSelectedTextField(textfield:contentSignUp.emailText)
+        resetSelectedTextField(textfield:contentSignUp.passwordText)
+        resetSelectedTextField(textfield:contentSignUp.passwordConfirmText)
+        contentSignUp.isHidden = false
     }
+    
+    
 }
 

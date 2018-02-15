@@ -42,21 +42,29 @@ class SignInView: UIView {
             print("Please register first")
             return
         }
-        
+
+        if isBlank(tf: [emailText,passwordText]) {
+            self.contentView.makeToast("Email or password blank")
+            print("Email or password blank")
+            return
+        }
+
         if emailText.text == User.StaticUser?._mail && passwordText.text == User.StaticUser?._password {
             emailText.text = ""
             passwordText.text = ""
-            self.contentView.makeToast("good I.D, welcome \(User.StaticUser!._mail)")
+            self.contentView.makeToast("Successful login")
             print("good I.D, welcome \(User.StaticUser!._mail)")
         } else {
+            highlightSelectedTextField(textfield:emailText)
+            shake(sender:emailText)
+            highlightSelectedTextField(textfield:passwordText)
+            shake(sender:passwordText)
             self.contentView.makeToast("Unable to find a match with this pair of email / password“")
             print("Unable to find a match with this pair of email / password")
         }
-        
     }
     
     @IBAction func registerClick(_ sender: Any) {
-        
         self.isHidden = true
         signUpDelegate?.SignUpView()
     }
