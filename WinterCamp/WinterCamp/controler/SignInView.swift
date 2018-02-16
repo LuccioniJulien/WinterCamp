@@ -63,6 +63,8 @@ class SignInView: UIView {
     
     @IBAction func registerClick(_ sender: Any) {
         self.isHidden = true
+        emailText.text = ""
+        passwordText.text = ""
         signUpDelegate?.SignUpView()
     }
     

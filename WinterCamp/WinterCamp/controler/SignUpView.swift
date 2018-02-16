@@ -49,6 +49,10 @@ class SignUpView: UIView {
             print("Email invalid")
             return
         }
+        if (_PASSWORD_LEN <= 8) {
+            self.contentView.makeToast("Password length inferior 8")
+            return
+        }
         if (checkPass(password: passwordText,confirm: passwordConfirmText)){
             let theUser:User = User(mail:emailText.text!,password:passwordText.text!)
             StaticUser.instance?.user = theUser
