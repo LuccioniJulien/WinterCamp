@@ -34,6 +34,8 @@ class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegat
         // contentSignIn.passwordText.text = User.StaticUser?._password
         resetSelectedTextField(textfield:contentSignIn.emailText)
         resetSelectedTextField(textfield:contentSignIn.passwordText)
+        contentSignIn.emailText.text = ""
+        contentSignIn.passwordText.text = ""
         contentSignIn.isHidden = false
     }
     
@@ -42,6 +44,9 @@ class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegat
         resetSelectedTextField(textfield:contentSignUp.emailText)
         resetSelectedTextField(textfield:contentSignUp.passwordText)
         resetSelectedTextField(textfield:contentSignUp.passwordConfirmText)
+        contentSignUp.emailText.text = ""
+        contentSignUp.passwordText.text = ""
+        contentSignUp.passwordConfirmText.text = ""
         contentSignUp.isHidden = false
     }
     
