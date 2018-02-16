@@ -88,6 +88,7 @@
 		1656076B20358D0E00366E66 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				16F653E12035862D00D1613D /* Main.storyboard */,
 				877DBDC120358D7200515CBD /* SignInView.xib */,
 				877DBDC320358D8400515CBD /* SignUpView.xib */,
 			);
@@ -130,7 +131,6 @@
 				1656076A20358D0200366E66 /* controler */,
 				1656076920358C5F00366E66 /* model */,
 				16F653DD2035862D00D1613D /* AppDelegate.swift */,
-				16F653E12035862D00D1613D /* Main.storyboard */,
 				16F653E42035862D00D1613D /* Assets.xcassets */,
 				16F653E62035862D00D1613D /* LaunchScreen.storyboard */,
 				16F653E92035862D00D1613D /* Info.plist */,

@@ -52,14 +52,13 @@ class SignUpView: UIView {
         if (checkPass(password: passwordText,confirm: passwordConfirmText)){
             let theUser:User = User(mail:emailText.text!,password:passwordText.text!)
             StaticUser.user = theUser
-            //print("User : \(User.StaticUser!._mail)")
-            //print("Pass : \(User.StaticUser!._password)")
             passwordText.text = ""
             passwordConfirmText.text=""
             emailText.text = ""
-             self.contentView.makeToast("Successful sign up")
+            self.contentView.makeToast("Successful sign up")
         }
     }
+    
     @IBAction func goToLoginClick(_ sender: Any) {
         self.isHidden = true
         signInDelegate?.SignInView()

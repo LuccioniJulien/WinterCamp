@@ -42,13 +42,11 @@ class SignInView: UIView {
             print("Please register first")
             return
         }
-
         if isBlank(tf: [emailText,passwordText]) {
             self.contentView.makeToast("Email or password blank")
             print("Email or password blank")
             return
         }
-
         if emailText.text == StaticUser.user?._mail && passwordText.text == StaticUser.user?._password {
             emailText.text = ""
             passwordText.text = ""
