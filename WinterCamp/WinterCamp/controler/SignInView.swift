@@ -37,16 +37,19 @@ class SignInView: UIView {
     }
     
     @IBAction func loginClick(_ sender: Any) {
+        //clique du bouton SignIn et vérification des champs
         if(StaticUser.instance?.user == nil){
             self.contentView.makeToast("Please register first")
             print("Please register first")
             return
         }
+        
         if isBlank(tf: [emailText,passwordText]) {
             self.contentView.makeToast("Email or password blank")
             print("Email or password blank")
             return
         }
+        
         if emailText.text == StaticUser.instance?.user?._mail && passwordText.text == StaticUser.instance?.user?._password {
             emailText.text = ""
             passwordText.text = ""
@@ -62,9 +65,8 @@ class SignInView: UIView {
     }
     
     @IBAction func registerClick(_ sender: Any) {
+        //Cache SignIn et fait apparaitre SignUp 
         self.isHidden = true
-        emailText.text = ""
-        passwordText.text = ""
         signUpDelegate?.SignUpView()
     }
     

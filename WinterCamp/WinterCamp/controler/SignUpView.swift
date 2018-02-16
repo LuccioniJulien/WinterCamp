@@ -38,6 +38,7 @@ class SignUpView: UIView {
     }
     
     @IBAction func signUpClick(_ sender: Any) {
+        //clique du bouton SignUp
         if isBlank(tf: [emailText,passwordText,passwordConfirmText]) {
             self.contentView.makeToast("Email or password blank")
             print("Email or password blank")
@@ -49,12 +50,14 @@ class SignUpView: UIView {
             print("Email invalid")
             return
         }
+        
         if (!isPasswordValid(passwordText)) {
             self.contentView.makeToast("Password need to have at least 8 caracters, 1 uppercase, 1 number")
             highlightSelectedTextField(textfield: passwordConfirmText)
             shake(sender: passwordConfirmText)
             return
         }
+        
         if (checkPass(password: passwordText,confirm: passwordConfirmText)){
             let theUser:User = User(mail:emailText.text!,password:passwordText.text!)
             StaticUser.instance?.user = theUser
@@ -66,6 +69,7 @@ class SignUpView: UIView {
     }
     
     @IBAction func goToLoginClick(_ sender: Any) {
+        //Cache SignUp et fait apparaitre SignIn
         self.isHidden = true
         signInDelegate?.SignInView()
     }
@@ -87,7 +91,7 @@ class SignUpView: UIView {
     }
     
     func checkPass(password: UITextField,confirm: UITextField)->Bool{
-        //verification des mots de passe
+        //verification de la confirmation de mot de passe
         let flag:Bool=(password.text==confirm.text)
         if (!flag){
             self.contentView.makeToast("Password confirmation doesn't match")
@@ -112,7 +116,5 @@ class SignUpView: UIView {
         }
         return flag
     }
-
-
 }
 

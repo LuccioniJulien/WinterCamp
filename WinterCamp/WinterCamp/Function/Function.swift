@@ -19,12 +19,12 @@ func highlightSelectedTextField(textfield: UITextField){
 func resetSelectedTextField(textfield: UITextField){
     //reset l'apparence des textfields
     textfield.layer.borderColor = UIColor.clear.cgColor
-    textfield.layer.borderWidth = 1
-    textfield.layer.cornerRadius = 5
+    textfield.layer.borderWidth = 0
+    textfield.layer.cornerRadius = 0
 }
 
 func isBlank(tf: [UITextField])->Bool{
-    //verification qu'il y a bien une saisie
+    //verification qu'il y a bien une saisie sur les textfields
     var flag:Bool=false
     var array:[Bool]=[]
     var oneIsBlank:Bool=false
