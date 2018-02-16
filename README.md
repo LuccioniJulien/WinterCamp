@@ -1,7 +1,7 @@
 WinterCamp
 
 Bonus functions :
-Password check if 8 caracters, 1 letter, 1 number & 1 special caracter
+Password check if 8 caracters, 1 uppercase, 1 number 
 Responsive for Ipad
 Toast for messages
 Mail checker

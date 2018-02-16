@@ -50,7 +50,7 @@ class SignUpView: UIView {
             return
         }
         if (!isPasswordValid(passwordText)) {
-            self.contentView.makeToast("Password need to have at least 8 caracters, 1 letter, 1 number & 1 special caracter")
+            self.contentView.makeToast("Password need to have at least 8 caracters, 1 uppercase, 1 number")
             highlightSelectedTextField(textfield: passwordConfirmText)
             shake(sender: passwordConfirmText)
             return
@@ -90,12 +90,12 @@ class SignUpView: UIView {
         //verification des mots de passe
         let flag:Bool=(password.text==confirm.text)
         if (!flag){
-            self.contentView.makeToast("Password invalid")
+            self.contentView.makeToast("Password confirmation doesn't match")
             highlightSelectedTextField(textfield:passwordText)
             highlightSelectedTextField(textfield:passwordConfirmText)
             shake(sender:passwordText)
             shake(sender:passwordConfirmText)
-            print("Password invalid")
+            print("Password confirmation doesn't match")
         }
         return flag
     }
