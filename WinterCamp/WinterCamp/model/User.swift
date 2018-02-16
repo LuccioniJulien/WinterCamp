@@ -14,5 +14,4 @@ class User {
         _mail = mail
         _password = password
     }
-
 }

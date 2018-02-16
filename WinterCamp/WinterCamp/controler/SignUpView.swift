@@ -51,7 +51,7 @@ class SignUpView: UIView {
         }
         if (checkPass(password: passwordText,confirm: passwordConfirmText)){
             let theUser:User = User(mail:emailText.text!,password:passwordText.text!)
-            StaticUser.user = theUser
+            StaticUser.instance?.user = theUser
             passwordText.text = ""
             passwordConfirmText.text=""
             emailText.text = ""

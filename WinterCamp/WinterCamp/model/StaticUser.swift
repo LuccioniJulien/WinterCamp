@@ -9,5 +9,8 @@
 import Foundation
 
 class StaticUser {
-    static var user:User? = nil
+    static let instance:StaticUser? = StaticUser()
+    var user:User?=nil
+    
+    private init(){}
 }
