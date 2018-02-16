@@ -39,8 +39,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6M4-JO-Ogg">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yourmail@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6M4-JO-Ogg">
                             <rect key="frame" x="16" y="53" width="343" height="30"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -51,7 +52,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-do-doi">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="**********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-do-doi">
                             <rect key="frame" x="16" y="136" width="343" height="30"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" keyboardKey="YES" adjustable="YES"/>
@@ -62,7 +63,7 @@
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lu-rs-Zep">
                             <rect key="frame" x="16" y="190" width="343" height="40"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="0.53345968389999998" blue="0.40955119750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="KbT-MJ-NaE"/>
                             </constraints>
@@ -81,7 +82,7 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-pK-o68">
                             <rect key="frame" x="16" y="283" width="343" height="40"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="0.53345968389999998" blue="0.40955119750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="aR3-8s-keS"/>
                             </constraints>
@@ -93,26 +94,48 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="Q8W-pK-o68" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="1tj-da-mN3"/>
+                        <constraint firstItem="Q8W-pK-o68" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="1tj-da-mN3">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="NhT-kl-Uk1" firstAttribute="top" secondItem="6M4-JO-Ogg" secondAttribute="bottom" constant="24" id="6lJ-54-LK4"/>
-                        <constraint firstItem="5vx-BU-HJ4" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="CCf-da-wgq"/>
-                        <constraint firstItem="6M4-JO-Ogg" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="FSC-Ho-fIg"/>
+                        <constraint firstItem="5vx-BU-HJ4" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="CCf-da-wgq">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
+                        <constraint firstItem="6M4-JO-Ogg" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="FSC-Ho-fIg">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="5vx-BU-HJ4" firstAttribute="top" secondItem="0em-ZE-FN4" secondAttribute="top" constant="24" id="Fu7-10-f0I"/>
-                        <constraint firstAttribute="trailing" secondItem="0lu-rs-Zep" secondAttribute="trailing" constant="16" id="GHb-v2-jSV"/>
+                        <constraint firstAttribute="trailing" secondItem="0lu-rs-Zep" secondAttribute="trailing" constant="16" id="GHb-v2-jSV">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="6M4-JO-Ogg" firstAttribute="top" secondItem="5vx-BU-HJ4" secondAttribute="bottom" constant="8" id="K3C-8p-pC6"/>
-                        <constraint firstItem="bUV-ye-Tjl" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="N4C-N2-7ef"/>
-                        <constraint firstAttribute="trailing" secondItem="Q8W-pK-o68" secondAttribute="trailing" constant="16" id="TpB-Tl-C6I"/>
-                        <constraint firstAttribute="trailing" secondItem="V9t-do-doi" secondAttribute="trailing" constant="16" id="bMt-Hm-S66"/>
+                        <constraint firstItem="bUV-ye-Tjl" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="N4C-N2-7ef">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="Q8W-pK-o68" secondAttribute="trailing" constant="16" id="TpB-Tl-C6I">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="V9t-do-doi" secondAttribute="trailing" constant="16" id="bMt-Hm-S66">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="0lu-rs-Zep" firstAttribute="top" secondItem="V9t-do-doi" secondAttribute="bottom" constant="24" id="dRy-kv-MWt"/>
-                        <constraint firstAttribute="trailing" secondItem="6M4-JO-Ogg" secondAttribute="trailing" constant="16" id="gWf-a5-iWh"/>
+                        <constraint firstAttribute="trailing" secondItem="6M4-JO-Ogg" secondAttribute="trailing" constant="16" id="gWf-a5-iWh">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="V9t-do-doi" firstAttribute="top" secondItem="NhT-kl-Uk1" secondAttribute="bottom" constant="8" id="i6f-9G-FPO"/>
-                        <constraint firstItem="V9t-do-doi" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="iAn-4o-7dN"/>
+                        <constraint firstItem="V9t-do-doi" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="iAn-4o-7dN">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="Q8W-pK-o68" firstAttribute="top" secondItem="bUV-ye-Tjl" secondAttribute="bottom" constant="8" id="wdi-ig-pPW"/>
-                        <constraint firstItem="0lu-rs-Zep" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="xOL-0g-mN7"/>
+                        <constraint firstItem="0lu-rs-Zep" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="xOL-0g-mN7">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                         <constraint firstItem="bUV-ye-Tjl" firstAttribute="top" secondItem="0lu-rs-Zep" secondAttribute="bottom" constant="24" id="xZE-jc-Kmh"/>
-                        <constraint firstItem="NhT-kl-Uk1" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="yQH-gv-m2q"/>
+                        <constraint firstItem="NhT-kl-Uk1" firstAttribute="leading" secondItem="0em-ZE-FN4" secondAttribute="leading" constant="16" id="yQH-gv-m2q">
+                            <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                        </constraint>
                     </constraints>
                 </view>
             </subviews>
