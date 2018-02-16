@@ -49,8 +49,10 @@ class SignUpView: UIView {
             print("Email invalid")
             return
         }
-        if (_PASSWORD_LEN <= 8) {
-            self.contentView.makeToast("Password length inferior 8")
+        if (!isPasswordValid(passwordText)) {
+            self.contentView.makeToast("Password need to have at least 8 caracters, 1 letter, 1 number & 1 special caracter")
+            highlightSelectedTextField(textfield: passwordConfirmText)
+            shake(sender: passwordConfirmText)
             return
         }
         if (checkPass(password: passwordText,confirm: passwordConfirmText)){
@@ -97,6 +99,20 @@ class SignUpView: UIView {
         }
         return flag
     }
+    
+    func isPasswordValid(_ password : UITextField) -> Bool{
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()-_=+{}|?>.<,:;~`’]{8,}$")
+        let flag: Bool = passwordTest.evaluate(with: password.text)
+        if (!flag) {
+            highlightSelectedTextField(textfield:password)
+            shake(sender:password)
+        }
+        else{
+            resetSelectedTextField(textfield:password)
+        }
+        return flag
+    }
+
 
 }
 
