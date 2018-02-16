@@ -39,13 +39,13 @@ class SignInView: UIView {
     @IBAction func loginClick(_ sender: Any) {
         //clique du bouton SignIn et vérification des champs
         if(StaticUser.instance?.user == nil){
-            self.contentView.makeToast("Please register first")
+            self.contentView.makeToast("Please register first", position: .top)
             print("Please register first")
             return
         }
         
         if isBlank(tf: [emailText,passwordText]) {
-            self.contentView.makeToast("Email or password blank")
+            self.contentView.makeToast("Email or password blank", position: .top)
             print("Email or password blank")
             return
         }
@@ -53,13 +53,13 @@ class SignInView: UIView {
         if emailText.text == StaticUser.instance?.user?._mail && passwordText.text == StaticUser.instance?.user?._password {
             emailText.text = ""
             passwordText.text = ""
-            self.contentView.makeToast("Successful login")
+            self.contentView.makeToast("Successful login", position: .top)
         } else {
             highlightSelectedTextField(textfield:emailText)
             shake(sender:emailText)
             highlightSelectedTextField(textfield:passwordText)
             shake(sender:passwordText)
-            self.contentView.makeToast("Unable to find a match with this pair of email / password“")
+            self.contentView.makeToast("Unable to find a match with this pair of email / password", position: .top)
             print("Unable to find a match with this pair of email / password")
         }
     }
