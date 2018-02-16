@@ -17,7 +17,8 @@ class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        contentSignUp.signInDelegate = self
+        contentSignIn.signUpDelegate = self
     }
 
     override func didReceiveMemoryWarning() {

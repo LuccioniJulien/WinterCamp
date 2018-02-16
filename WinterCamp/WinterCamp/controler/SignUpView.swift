@@ -18,7 +18,7 @@ class SignUpView: UIView {
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var backToLoginButton: UIButton!
     
-    @IBOutlet var signInDelegate:SignInViewDelegate!
+    var signInDelegate:SignInViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

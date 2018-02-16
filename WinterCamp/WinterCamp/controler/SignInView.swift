@@ -17,7 +17,7 @@ class SignInView: UIView {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var contentView: UIView!
     
-    @IBOutlet var signUpDelegate:SignUpViewDelegate?
+    var signUpDelegate:SignUpViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -7,6 +7,6 @@
 //
 import Foundation
 
-@objc protocol SignUpViewDelegate {
+protocol SignUpViewDelegate {
     func SignUpView()
 }
