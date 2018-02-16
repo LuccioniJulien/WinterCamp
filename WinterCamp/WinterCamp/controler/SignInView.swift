@@ -37,7 +37,7 @@ class SignInView: UIView {
     }
     
     @IBAction func loginClick(_ sender: Any) {
-        if(User.StaticUser?._mail==""){
+        if(StaticUser.user == nil){
             self.contentView.makeToast("Please register first")
             print("Please register first")
             return
@@ -49,11 +49,10 @@ class SignInView: UIView {
             return
         }
 
-        if emailText.text == User.StaticUser?._mail && passwordText.text == User.StaticUser?._password {
+        if emailText.text == StaticUser.user?._mail && passwordText.text == StaticUser.user?._password {
             emailText.text = ""
             passwordText.text = ""
             self.contentView.makeToast("Successful login")
-            print("good I.D, welcome \(User.StaticUser!._mail)")
         } else {
             highlightSelectedTextField(textfield:emailText)
             shake(sender:emailText)

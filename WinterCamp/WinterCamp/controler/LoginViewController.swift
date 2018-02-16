@@ -19,6 +19,7 @@ class LoginViewController: UIViewController,SignInViewDelegate,SignUpViewDelegat
         // Do any additional setup after loading the view, typically from a nib.
         contentSignUp.signInDelegate = self
         contentSignIn.signUpDelegate = self
+        contentSignUp.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {

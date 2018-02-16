@@ -7,11 +7,10 @@
 //
 
 class User {
-    var _mail:String = ""
-    var _password:String = ""
-    static let StaticUser:User? = User()
+    var _mail:String?
+    var _password:String?
     
-    func setUser(mail:String,password:String){
+    init(mail:String?,password:String?){
         _mail = mail
         _password = password
     }
